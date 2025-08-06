@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Open Notepad</title>
+<HTA:APPLICATION
+  APPLICATIONNAME="OpenNotepad"
+  BORDER="thin"
+  CAPTION="yes"
+  SHOWINTASKBAR="yes"
+  SINGLEINSTANCE="yes"
+  SYSMENU="yes"
+  WINDOWSTATE="normal">
+<script language="VBScript">
+Sub Window_OnLoad
+    ' メモ帳を起動
+    CreateObject("WScript.Shell").Run "notepad.exe"
+    ' HTA ウィンドウを閉じる
+    window.close
+End Sub
+</script>
+</head>
+<body>
+<p>Opening Notepad...</p>
+</body>
+</html>
